@@ -49,3 +49,5 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?','')
 if add_my_fruit is not '':
   my_cur.execute(f"insert into fruit_load_list(fruit_name) values ('{add_my_fruit}');")
   streamlit.write('Thanks for adding ', add_my_fruit)
+
+my_cur.execute("insert into fruit_load_list values ('from_streamlit');")
